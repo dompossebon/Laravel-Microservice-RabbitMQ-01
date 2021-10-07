@@ -1,6 +1,9 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\{
+    CategoryController,
+    CompanyController
+};
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,6 +17,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+/**
+ *
+ */
+//Route::resource(
+//    [
+//        'categories', CategoryController::class,
+//        'companies', CompanyController::class,
+//    ]
+//);
+
+Route::resource('categories', CategoryController::class);
+Route::resource('companies', CompanyController::class);
+
+Route::get('/', function () {
+    return response()->json(['message' => 'success']);
+});
+
+Route::fallback(function () {
+    return response()->json(['error' => 'Route not found.'], 404);
 });
