@@ -1,10 +1,12 @@
 <?php
 
 
-namespace App\Service;
+namespace App\Services;
 
 
-use Carlosfgti\MicroservicesCommon\Services\Traits\ConsumeExternalService;
+//use Carlosfgti\MicroservicesCommon\Services\Traits\ConsumeExternalService;
+
+use App\Services\Traits\ConsumeExternalService;
 
 class EvaluationService
 {
@@ -21,8 +23,9 @@ class EvaluationService
 
     public function getEvaluationsCompany(string $company)
     {
-        $response = $this->request('get', "/evaluations/{$company}");
+        $response = $this->request("get", "/evaluations/{$company}");
 
         return $response->body();
     }
+
 }
