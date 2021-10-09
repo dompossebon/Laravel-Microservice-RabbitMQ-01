@@ -25,7 +25,6 @@ services:
         restart: unless-stopped
         ports:
             - 8000:80
-            - 443:443
         volumes:
             - ./:/var/www
             - ./docker/nginx/:/etc/nginx/conf.d/
@@ -69,7 +68,7 @@ services:
     redis_micro_01:
         image: redis:latest
         ports:
-            - 6379:6379
+            - 6378:6379
         networks:
             - microservices_01
 

@@ -58,6 +58,11 @@ Gerar a key do projeto Laravel
 php artisan key:generate
 ```
 
+Rodar os comandos para criar as Tabelas
+```sh
+php artisan migrate
+```
+
 Rodar os testes
 ```sh
 php artisan test

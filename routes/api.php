@@ -31,7 +31,7 @@ Route::resource('categories', CategoryController::class);
 Route::resource('companies', CompanyController::class);
 
 Route::get('/', function () {
-    return response()->json(['message' => 'success']);
+    return response()->json(['message' => 'success - Micro-01']);
 });
 
 Route::fallback(function () {
