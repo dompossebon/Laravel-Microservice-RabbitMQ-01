@@ -52,6 +52,7 @@ class CompanyController extends Controller
      */
     public function store(StoreUpdateCompany $request)
     {
+
         $company = $this->repository->create($request->validated());
 
 //        CompanyCreated::dispatch($company->email)
@@ -69,9 +70,9 @@ class CompanyController extends Controller
     {
         $company = $this->repository->where('uuid', $uuid)->firstOrFail();
 
-        $evaluations = $this->evaluationService->getEvaluationsCompany($uuid);
+//        $evaluations = $this->evaluationService->getEvaluationsCompany($uuid);
 
-        return new CompanyResource($evaluations);
+        return new CompanyResource($company);
     }
 
     /**

@@ -27,6 +27,8 @@ use Illuminate\Support\Facades\Route;
 //    ]
 //);
 
+Route::post('/companies', [CompanyController::class, 'store']);
+
 Route::resource('categories', CategoryController::class);
 Route::resource('companies', CompanyController::class);
 
