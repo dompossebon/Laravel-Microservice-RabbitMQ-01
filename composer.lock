@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6cadd819a6415b190ae2704ced6e6c8b",
+    "content-hash": "3562f69d4e0fa60250310dbca9af02de",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -351,6 +351,44 @@
                 }
             ],
             "time": "2020-05-25T17:44:05+00:00"
+        },
+        {
+            "name": "dompossebon/microservices-common",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dompossebon/laravel-package-request.git",
+                "reference": "e5deb30c8ed410ab8e13e5fe037c587df0dd923c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dompossebon/laravel-package-request/zipball/e5deb30c8ed410ab8e13e5fe037c587df0dd923c",
+                "reference": "e5deb30c8ed410ab8e13e5fe037c587df0dd923c",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Dompossebon\\MicroservicesCommon\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alexandre Possebon",
+                    "email": "dompossebon@gmail.com"
+                }
+            ],
+            "description": "Facilita a utilização de Request para outros Projetos",
+            "support": {
+                "issues": "https://github.com/dompossebon/laravel-package-request/issues",
+                "source": "https://github.com/dompossebon/laravel-package-request/tree/main"
+            },
+            "time": "2021-10-11T17:26:26+00:00"
         },
         {
             "name": "dragonmantank/cron-expression",
@@ -7448,12 +7486,14 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "dompossebon/microservices-common": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^7.3|^8.0"
     },
     "platform-dev": [],
-    "plugin-api-version": "1.1.0"
+    "plugin-api-version": "2.1.0"
 }

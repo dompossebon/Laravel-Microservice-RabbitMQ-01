@@ -3,10 +3,7 @@
 
 namespace App\Services;
 
-
-//use Carlosfgti\MicroservicesCommon\Services\Traits\ConsumeExternalService;
-
-use App\Services\Traits\ConsumeExternalService;
+use Dompossebon\MicroservicesCommon\Services\Traits\ConsumeExternalService;
 
 class EvaluationService
 {
